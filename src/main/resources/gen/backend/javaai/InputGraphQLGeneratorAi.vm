@@ -1,0 +1,3 @@
+Create GraphQL input type for Java classes.
+All values are optional, not required.
+Show each result input in separate GraphQL code block.

@@ -1,0 +1,26 @@
+Here is class $!{domainClassSimple}:
+
+```java
+$!{domainClassStr}
+```java
+
+Using class $!{domainClassSimple} create a new class. For class name add suffix `Input`.
+Divide fields into two groups: Field_Group_A and Field_Group_B.
+Put fields of types defined in ('java.lang', 'java.time') packages into Field_Group_B.
+Put fields of primitive types into Field_Group_A.
+Put the rest of fields into Field_Group_B.
+For every field from Field_Group_A change type to 'String'.
+For every field from Field_Group_B add suffix `Input` to type name.
+Make all class fields private.
+Remove comments and empty lines from class definition.
+
+
+
+Put fields of types defined in ('java.lang', 'java.time') packages into field group Field_Group_B.
+Put fields of primitive types into field group Field_Group_A.
+Put fields not added yet to group Field_Group_A into field group Field_Group_B.
+
+For every field added to group Field_Group_A change type to 'String'.
+For every field added to group Field_Group_B append suffix `Input` to type name.
+Make all class fields private.
+Remove comments and empty lines from class definition.

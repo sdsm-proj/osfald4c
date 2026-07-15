@@ -1,0 +1,66 @@
+Oto wzór interfejsu Dto, interfejs InfoElementDto.
+
+```typescript
+
+
+
+import { IsoDateDto } from '../models/iso-date-dto';
+export interface InfoElementDto {
+ "etlLoadDate": IsoDateDto;
+ "name": string;
+ "version": string;
+}
+
+```typescript
+
+A oto odpowiadający jej wzorcowy schemat (schema) o nazwie ‘InfoElementPropsSchema’ oraz wzorcowy typ ‘InfoElementProps’.
+Schemat ma końcówkę ‘PropsSchema’, typ ma końcówkę ‘Props’.
+
+```typescript
+
+import { z } from 'zod';
+
+
+import { IsoDate } from '@core/date/value-objects/iso-date';
+
+
+export const InfoElementPropsSchema = z.object({
+   name: z.string(),
+   version: z.string(),
+   etlLoadDate: z.instanceof(IsoDate),
+});
+
+
+export type InfoElementProps = z.infer<typeof InfoElementPropsSchema>;
+
+
+```typescript
+
+
+Stwórz analogiczny schemat i typ dla klasy DTO o nazwie ‘$!{dtoTypeName}’.
+Użyj nazw '$!{dtoProps}' i '$!{dtoPropsSchema}'.
+
+
+```typescript
+
+import { AccountStatusDto } from '../models/account-status-dto';
+import { ContextStatusDto } from '../models/context-status-dto';
+import { IsoDateWithTimeDto } from '../models/iso-date-with-time-dto';
+import { UserEmailDto } from '../models/user-email-dto';
+import { UserNameDto } from '../models/user-name-dto';
+import { UuidDto } from '../models/uuid-dto';
+export interface UserListElementDto {
+ "accountStatus": AccountStatusDto;
+ "activationDate"?: IsoDateWithTimeDto;
+ "contextStatus": ContextStatusDto;
+ "email": UserEmailDto;
+ "name": UserNameDto;
+ "permissionChangeBy"?: string;
+ "permissionsChangeDate"?: IsoDateWithTimeDto;
+ "uuid": UuidDto;
+}
+
+
+```typescript
+
+Zwróć wyłącznie wygenerowane typy, nie pisz dodatkowego komentarza.

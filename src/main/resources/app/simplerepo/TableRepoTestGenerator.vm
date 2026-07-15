@@ -1,0 +1,58 @@
+package $!{_test_package_name_};
+
+import $!{_entity_package_name_}.$!{_entity_class_name_}; 
+import $!{_repo_package_name_}.$!{_repo_class_name_};
+
+import com.pdv.alvorq.sql.db._util.TestPrepareTrxFactory;
+import com.pdv.utensil.db.repo.RepoRuntimeException;
+import com.pdv.utensil.db.trx.iface.Trx;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.UUID;
+
+@Slf4j
+public class $!{_test_class_name_} {
+
+    @Test
+    public void test01() {
+        try (Trx trx = TestPrepareTrxFactory.get().newTrx()) {
+            String uid = UUID.randomUUID().toString().replace("-", "");
+            $!{_repo_class_name_} repo = new $!{_repo_class_name_}(trx);
+
+            // -- create -----------------------------------------------------------
+            $!{_entity_class_name_} en1 = new $!{_entity_class_name_}();
+            en1.$!{_primary_key_setter_}(uid);
+$!{_set_not_null_fields_for_create_}            
+            repo.create(en1);
+
+            // -- find by key ------------------------------------------------------
+            $!{_entity_class_name_} en2 = repo.findByKey(uid);
+            if (en2 == null) {
+                throw new RepoRuntimeException("Entity not found, findByKey");
+            }
+
+            // -- update -----------------------------------------------------------
+$!{_set_all_fields_for_update_} 
+            repo.update(en2);
+
+            // -- find by autoinc --------------------------------------------------
+            $!{_entity_class_name_} en3 = repo.findByAutoinc(en2.$!{_autoinc_key_getter_}());
+            if (en3 == null) {
+                throw new RepoRuntimeException("Entity not found, findByAutoinc");
+            }
+
+            // -- find all ---------------------------------------------------------
+            repo.findAll();
+
+            //----------------------------------------------------------------------
+            trx.commit();
+        }
+    }
+
+}
+

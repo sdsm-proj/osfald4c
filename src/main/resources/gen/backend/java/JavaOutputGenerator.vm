@@ -1,0 +1,8 @@
+package $!{fullPackage};
+
+import lombok.Data;
+
+@Data
+public class $!{simpleClass} {
+$!{members}
+}

@@ -1,0 +1,25 @@
+{
+  "code" : "JSDE01",
+  "prjShortName" : "sdsm01",
+  "configModel" : {
+    "patternTableName" : "jsde_domain",
+    "patternTableSqlFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\resources\\db\\changelog\\1.29.x.sql",
+    "genTableName" : "jsde_expdom",
+    "genTableSqlFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\resources\\db\\changelog\\exdo.sql",
+    "patternEntityClass" : "DomainEntity",
+    "patternEntityPackage" : "pl.org.opi.ln.jsde.infrastructure",
+    "patternEntityFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\java\\pl\\org\\opi\\ln\\jsde\\infrastructure\\DomainEntity.java",
+    "genEntityClass" : "ExdoEntity",
+    "genEntityPackage" : "pl.org.opi.ln.exdo.infrastructure",
+    "genEntityFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\java\\pl\\org\\opi\\ln\\exdo\\infrastructure\\ExdoEntity.java",
+    "patternAppEntityIdClass" : "DomainId",
+    "patternAppEntityIdFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\java\\pl\\org\\opi\\ln\\jsde\\application\\DomainId.java",
+    "genAppEntityIdClass" : "ExdoId",
+    "genAppEntityIdPackage" : "pl.org.opi.ln.exdo.application",
+    "genAppEntityIdFullFile" : "C:\\prjdron\\jsde\\ln-profiles-api\\web-app\\src\\main\\java\\pl\\org\\opi\\ln\\exdo\\application\\ExdoId.java"
+  },
+  "extractModel" : {
+    "patternTableSqlCreate" : "CREATE TABLE jsde_domain\n(\n    id VARCHAR(36) primary key,\n    name VARCHAR(400) not null,\n    institution_id VARCHAR(36) not null,\n    date_added  DATE not null,\n    users_count INTEGER not null DEFAULT 0\n);",
+    "genTableSqlCreate" : "CREATE TABLE jsde_exdo\n(\n    id VARCHAR(36) primary key,\n    nazwa VARCHAR(400) not null,\n    institution_id VARCHAR(36) not null,\n    jakas_data  DATE not null,\n    jakas_liczba INTEGER not null DEFAULT 0\n);"
+  }
+}

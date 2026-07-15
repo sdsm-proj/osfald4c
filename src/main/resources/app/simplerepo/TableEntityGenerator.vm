@@ -1,0 +1,14 @@
+package $!{_entity_package_name_};
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class $!{_entity_class_name_} {
+$!{_fields_}}

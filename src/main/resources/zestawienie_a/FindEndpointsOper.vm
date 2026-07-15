@@ -1,0 +1,11 @@
+Here is Java controller class.
+
+```java
+$!{class_src}
+```java
+
+Find all endpoint names in this class.
+Endpoint name is a value parameter in @RequestMapping annotation.
+Return endpoint only names, separated by commas.
+Remove duplicate names.
+Do not return any other comments.

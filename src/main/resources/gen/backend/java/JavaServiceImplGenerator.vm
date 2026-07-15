@@ -1,0 +1,38 @@
+package $!{fullPackage};
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
+import pl.org.opi.base.service.SimpleService;
+import pl.org.opi.nawa.raport.common.security.RaportSecurityManager;
+import pl.org.opi.nawa.raport.common.service.BaseRaportMutationService;
+import $!{domainFullClass};
+
+@Slf4j
+@SimpleService
+public class $!{simpleClass} extends BaseRaportMutationService implements $!{simpleClassIface} {
+
+    // private $!{domainSimpleClass} $!{domainSimpleClassLower};
+
+    @Override
+    @Transactional
+    public String $!{serviceOperationNameLower}(String blokadaId, String dokumentId, $!{domainSimpleClass} $!{domainSimpleClassLower}) {
+        // this.$!{domainSimpleClassLower} = $!{domainSimpleClassLower};
+        return handle(blokadaId, dokumentId);
+    }
+
+    @Override
+    protected String process() {
+        // business logic here
+        // use $!{domainSimpleClassLower}
+
+        getRaportRepo().save(getRaport());
+        return getRaport().getId();
+    }
+
+    @Override
+    protected RaportSecurityManager.Range getSecurityRange() {
+        return null;
+    }
+
+}
+

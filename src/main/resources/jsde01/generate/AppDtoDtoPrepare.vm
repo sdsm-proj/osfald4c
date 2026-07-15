@@ -1,0 +1,19 @@
+Below is the definition of a table $!{config_patternTableName}:
+```SQL
+$!{extract_patternTableSqlCreate}
+```SQL
+
+And this is the definition of a class $!{config_patternAppDtoDtoClass}:
+```java
+$!{java_patternAppDtoDto}
+```java
+
+Create an analogous class named $!{config_genAppDtoDtoClass} for the table $!{config_genTableName}.
+The structure of the table $!{config_genTableName} is shown below:
+```SQL
+$!{extract_genTableSqlCreate}
+```SQL
+
+Let the created class $!{config_genAppDtoDtoClass} be located in the package $!{config_genAppDtoDtoPackage}.
+Let the identifier (id) field of the created class be the field of type $!{config_genAppEntityIdClass} located in the package $!{config_genAppEntityIdPackage}.
+Return only the source code of the created class $!{config_genAppDtoDtoClass}.

@@ -1,0 +1,29 @@
+Below is the definition of the repository class $!{patternInfraRepoClass}:
+```java
+$!{java_pattern}
+```java
+
+Create an analogous class named $!{genInfraRepoClass}.
+Let the class $!{genInfraRepoClass} contain only:
+a constructor,
+fields: (LOG, entityManager, usersWebClient),
+methods: (addNewDomain, findByIds, deleteDomains).
+
+Rename the method ‘addNewDomain’ to ‘addNew’.
+Rename the method ‘deleteDomains’ to ‘delete’.
+Do not insert or remove import statements for classes: ($!{genEntityClass}, $!{genInfraAddVoClass}).
+In methods, replace the type $!{patternAppEntityIdClass} with the type $!{genAppEntityIdClass}. Import the class $!{genAppEntityIdClass} from the package $!{genAppEntityIdPackage}.
+In methods, replace the type $!{patternEntityClass} with the type $!{genEntityClass}. Do not import the $!{genEntityClass} class.
+In methods, replace the type $!{patternInfraAddVoClass} with the type $!{genInfraAddVoClass}. Do not import the $!{genInfraAddVoClass} class.
+Let the created class $!{genInfraRepoClass} be located in the package $!{genInfraRepoPackage}.
+
+In method ‘addNew’, in the entity constructor call, match the fields of class $!{genInfraAddVoClass} to the constructor of type $!{genEntityClass}.
+```java
+$!{java_InfraAddVoClass}
+```java
+```java
+$!{java_entity}
+```java
+
+Add package import 'pl.org.opi.ln.globalshared.config.UsersWebClient'.
+Return only the source code of the created class $!{genInfraRepoPackage}.

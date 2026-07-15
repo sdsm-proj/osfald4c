@@ -1,0 +1,78 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l:::p {comp label2::l:p::p, comp label1::l:p::p, comp btnReadProject::l:p::p, comp scrollPane1::l::327:x, comp edFind::l::327:x}, space :::p, comp panel1:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l {comp panel1:::::x, seq {comp btnReadProject:::p::p, space s:::p, comp label1:::p::p, space :::p, comp scrollPane1::::439:x, space u:::p, comp label2:::p::p, space :::p, comp edFind:::p::p}}, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnReadProject"
+				"text": "Read project"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnReadProject", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "listOfDto"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edFind"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "edFind", true ) )
+				addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "edFindPropertyChange", true, "text" ) )
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "edFindKeyPressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "List of DTO"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Find"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane2::::388:x, comp edFilePath::l:::x, seq l {comp label6:::p::p, space s:::p, comp labelDtoVariant::::308:x}, seq {par l {comp label3:::p::p, comp label4::l:p::p, comp btnGotoGen::l:p::p}, space :0:0:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label3:::p::p, space :::p, comp edFilePath:::p::p, space :p:16:p, comp label4:::p::p, space :::p, comp scrollPane2::::413:x, space :::p, par b {comp label6::b:p::p, comp labelDtoVariant::b:p::p}, space :::p, comp btnGotoGen:::p::p, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Full file name"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "Source code"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnGotoGen"
+					"text": "Go to generator"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnGotoGen", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelDtoVariant"
+					"text": "..."
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "DTO variant"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "edFilePath"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "edSourceOfDto"
+						"font": new java.awt.Font( "DejaVu Sans Mono", 0, 11 )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 745, 585 )
+		} )
+	}
+}

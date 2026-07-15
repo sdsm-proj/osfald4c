@@ -1,0 +1,52 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp edPrjShortName::l::641:x, seq {par l {comp lblPrjType:::p::p, comp lblPrjName::l:p::p, comp label1::l:p::p}, space :0:552:x}, seq l {comp edPrjFullFileName::::569:x, space :::p, comp btnPrjFullFileName:::p:66:p}, comp comboPrjType::l::641:x, seq t {space :0:479:x, comp btnOk:::p::p, space :::p, comp btnCancel:::p::p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp lblPrjType:::p::p, space :::p, comp comboPrjType:::p::p, space u:::p, comp lblPrjName:::p::p, space :::p, comp edPrjShortName:::p::p, space u:::p, comp label1:::p::p, space :::p, par b {comp btnPrjFullFileName::b:p::p, comp edPrjFullFileName::b:p::p}, space ::163:x, par b {comp btnCancel::b:p::p, comp btnOk::b:p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblPrjType"
+				"text": "Generator type"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboPrjType"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblPrjName"
+				"text": "Project name"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjShortName"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Project file name"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjFullFileName"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnPrjFullFileName"
+				"text": "..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnPrjFullFileName", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnOk"
+				"text": "OK"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnOk", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCancel"
+				"text": "Cancel"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCancel", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 655, 410 )
+		} )
+	}
+}

@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {comp splitPane1:::::x, seq {comp btnRefresh:::p::p, space :::x, comp btnSelect:::p::p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp splitPane1:::::x, space :::p, par t {comp btnSelect:::p::p, comp btnRefresh:::p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSelect"
+				"text": "Select"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnSelect", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnRefresh"
+				"text": "Refresh"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnRefresh", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+				name: "splitPane1"
+				"dividerLocation": 300
+				"dividerSize": 16
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp scrollPaneDocuments::l::0:x, seq {par l {comp labelDocuments:::p::p, comp labelSections::l:p::p}, space :0:238:x}, comp scrollPaneSections::l::299:x}"
+					"$verticalGroup": "par l {seq l {comp labelDocuments:::p::p, space :::p, comp scrollPaneDocuments:::p:176:p, space :::p, comp labelSections:::p::p, space :::p, comp scrollPaneSections::::194:x}}"
+				} ) {
+					name: "panel1"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelDocuments"
+						"text": "Documents"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPaneDocuments"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "listDocuments"
+							addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "onListDocumentsValueChanged", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelSections"
+						"text": "Sections"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPaneSections"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "listSections"
+							addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "onListSectionsValueChanged", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "left"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {comp labelPart:::p::p, space :0:136:x}, comp scrollPanePart::l::236:x, comp edSelectedPart::t::236:x, seq l {space :::p, comp labelSelectedPart:::p::p, space ::186:x}}"
+					"$verticalGroup": "par l {seq l {comp labelPart:::p::p, space :::p, comp scrollPanePart::::328:x, space s:::p, comp labelSelectedPart:::p::p, space :::p, comp edSelectedPart:::p::p}}"
+				} ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelPart"
+						"text": "Section part to process"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPanePart"
+						add( new FormComponent( "javax.swing.JTree" ) {
+							name: "treePart"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "treePartMouseClicked", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "edSelectedPart"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelSelectedPart"
+						"text": "Selected"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "right"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 565, 470 )
+		} )
+	}
+}

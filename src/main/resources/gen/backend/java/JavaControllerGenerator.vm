@@ -1,0 +1,35 @@
+package $!{fullPackage};
+
+import graphql.schema.DataFetchingEnvironment;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.stereotype.Controller;
+import pl.org.opi.locks.dto.BlokadaInput;
+import pl.org.opi.osf.validation.controller.AbstractInputValidatingController;
+import $!{javaServiceFullPackage}.*;
+import $!{javaInputFullPackage}.*;
+import $!{javaInputMapperFullClass};
+
+@Controller
+@Slf4j
+@RequiredArgsConstructor
+public class $!{simpleClass} extends AbstractInputValidatingController {
+
+    private final $!{javaInputMapperSimpleClass} inputMapper;
+    private final $!{javaServiceIfaceSimpleName} service;
+
+    @MutationMapping
+    public String $!{javaControllerMethodName}(@Argument BlokadaInput blokada,
+                            @Argument @NotNull $!{javaInputSimpleName} input,
+                            DataFetchingEnvironment dataFetchingEnvironment) {
+        return service.$!{serviceOperationNameLower}(
+            blokada.getBlokadaId(),
+            input.getDokumentId(),
+            inputMapper.input2Domain(input)
+        );
+    }
+}

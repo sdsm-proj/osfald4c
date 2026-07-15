@@ -1,0 +1,32 @@
+package pl.org.opi.sdsm.app.zestawienie_a.oper.editPhase;
+
+import lombok.RequiredArgsConstructor;
+import pl.org.opi.sdsm.app.zestawienie_a._ZestawienieAUtil;
+import pl.org.opi.sdsm.app.zestawienie_a.stru.editPhase.ui.ZaEditViewPanel;
+import pl.org.opi.sdsm.frmwk.util.msgbox.OsfaldMsgBox;
+
+@RequiredArgsConstructor
+public class LoadOper {
+
+    private final ZaEditViewPanel viewPanel;
+
+    public void exec() {
+        try {
+            execCore();
+        } catch (Exception ex) {
+            OsfaldMsgBox.error(ex);
+        }
+    }
+
+    private void execCore() throws Exception {
+        var em = _ZestawienieAUtil.getModel().getEditModel();
+        viewPanel.getEdAngularComponentPath().setText(em.getAngularComponentPath());
+        viewPanel.getEdAngularComponentFileName().setText(em.getAngularComponentShortFileName());
+        viewPanel.getLabelTs().setText(em.getAngularComponentTsFullFileName());
+        viewPanel.getLabelHtml().setText(em.getAngularComponentHtmlFullFileName());
+        viewPanel.getLabelCss().setText(em.getAngularComponentCssFullFileName());
+        viewPanel.getEdComponentClassName().setText(em.getComponentClassName());
+        viewPanel.getEdSelector().setText(em.getSelector());
+    }
+
+}

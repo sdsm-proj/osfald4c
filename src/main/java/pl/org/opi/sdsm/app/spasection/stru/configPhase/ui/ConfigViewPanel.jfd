@@ -1,0 +1,58 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp edProjectRootPath::l::388:x, comp edSourceSubPath::t::388:x, comp edTargetSubPath::l::388:x, comp scrollPaneLookForClassesSubPath::l::388:x, seq {par l {comp labelProjectRootPath::l:p::p, comp labelSourceSubPath::l:p::p, comp labelTargetSubPath::l:p::p, comp labelLookForClassesSubPath::l:p::p, comp labelJars::l:p::p}, space :0:135:x}, comp scrollPaneJars::l::388:x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp labelProjectRootPath:::p::p, space :::p, comp edProjectRootPath:::p::p, space :::p, comp labelSourceSubPath:::p::p, space :::p, comp edSourceSubPath:::p::p, space :::p, comp labelTargetSubPath:::p::p, space :::p, comp edTargetSubPath:::p::p, space :::p, comp labelLookForClassesSubPath:::p::p, space :::p, comp scrollPaneLookForClassesSubPath:::p:80:p, space :::p, comp labelJars:::p::p, space :::p, comp scrollPaneJars::::89:x, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelProjectRootPath"
+				"text": "Project root path"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edProjectRootPath"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelSourceSubPath"
+				"text": "Source sub path"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edSourceSubPath"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelTargetSubPath"
+				"text": "Target sub path"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edTargetSubPath"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelLookForClassesSubPath"
+				"text": "Look for classes sub path - separators [ , ; enter ]"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPaneLookForClassesSubPath"
+				add( new FormComponent( "pl.org.opi.sdsm.frmwk.mechanics.component.JTextAreaNoTab" ) {
+					name: "taLookForClassesSubPath"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelJars"
+				"text": "Jars - separators [ , ; enter ]"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPaneJars"
+				add( new FormComponent( "pl.org.opi.sdsm.frmwk.mechanics.component.JTextAreaNoTab" ) {
+					name: "taJars"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 405 )
+		} )
+	}
+}

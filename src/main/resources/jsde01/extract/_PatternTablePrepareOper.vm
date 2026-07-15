@@ -1,0 +1,12 @@
+Poniżej znajduje się skrypt SQL:
+
+```SQL
+
+$!{sqlScript}
+
+```SQL
+
+Znajdź w nim polecenie tworzenia (create table) dla tabeli $!{tableName}.
+
+Zwróć wyłącznie znalezione polecenie create table.
+

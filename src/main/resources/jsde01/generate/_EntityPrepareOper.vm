@@ -1,0 +1,35 @@
+Poniżej jest definicja tabeli $!{config_patternTableName}:
+
+```SQL
+
+$!{extract_patternTableSqlCreate}
+
+```SQL
+
+A to definicja klasy encji $!{config_patternEntityClass}:
+
+```java
+
+$!{java_patternEntity}
+
+```java
+
+Stwórz analogiczną klasę o nazwie $!{config_genEntityClass} dla tabeli $!{config_genTableName}.
+Struktura tabeli $!{config_genTableName} poniżej:
+
+
+```SQL
+
+$!{extract_genTableSqlCreate}
+
+```SQL
+
+Niech stworzona klasa $!{config_genEntityClass} znajdzie się w pakiecie $!{config_genEntityPackage}.
+
+W stworzonej klasie $!{config_genEntityClass} zamień typ pola 'id' na typ $!{genAppEntityIdClass}
+znajdujący się w pakiecie $!{genAppEntityIdPackage}.
+
+Niech pole 'institutionId' będzie typu 'InstitutionId' z pakietu 'pl.org.opi.ln.starter.types.InstitutionId'.
+
+
+Zwróć wyłącznie kod źródłowy stworzonej klasy $!{config_genEntityClass}.

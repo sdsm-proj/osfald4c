@@ -1,0 +1,10 @@
+package $!{fullPackage};
+
+import org.mapstruct.Mapper;
+import $!{javaInputFullClass};
+import $!{domainFullClass};
+
+@Mapper(uses = {})
+public abstract class $!{simpleClass} {
+    public abstract $!{domainSimpleClass} input2Domain($!{javaInputSimpleClass} input);
+}

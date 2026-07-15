@@ -1,0 +1,11 @@
+Poniżej znajduje się definicja klasy $!{patternAppEntityIdClass}.
+
+```java
+
+$!{java_pattern}
+
+```java
+
+Stwórz analogiczną klasę o nazwie $!{genAppEntityIdClass}.
+Niech stworzona klasa $!{genAppEntityIdClass} znajdzie się w pakiecie $!{genAppEntityIdPackage}.
+Zwróć wyłącznie kod źródłowy stworzonej klasy $!{genAppEntityIdClass}.

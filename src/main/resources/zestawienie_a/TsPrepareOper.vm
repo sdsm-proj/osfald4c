@@ -1,0 +1,41 @@
+
+Here is a definition of Angular component:
+
+```typescript
+
+import { Component } from '@angular/core';
+import {OpiTableModule} from "@opi/ng/ui/table";
+import {OpiHttp} from "@opi/ng/common/http";
+
+@Component({
+  selector: 'component-x',
+  templateUrl: './component-x.html',
+  standalone: true,
+  imports: [
+    OpiTableModule
+  ],
+  styleUrls: ['./component-x.css']
+})
+export class ComponentX {
+
+  constructor(private _http: OpiHttp) {
+  }
+
+  _elementList: any[] = [
+  ];
+
+  getList(): any {
+    let rslt = this._http.get('/end-point')
+      .fetchJson().subscribe(val => {
+        this._elementList = val;
+      });
+  }
+
+```typescript
+
+Create an analogous component.
+Change the class name to: '$!{componentClassName}'.
+Change the selector to: '$!{selector}'.
+Change templateUrl to: '$!{angularComponentShortFileName}.html'
+Change styleUrls to: '$!{angularComponentShortFileName}.css'
+Change endpoint in 'getList' to: '$!{selectedEndpoint}'.

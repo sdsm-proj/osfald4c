@@ -1,0 +1,7 @@
+Zwróć nazwę typu zdefiniowanego w podanym kodzie:
+
+```typescript
+$!{dto_src}
+```typescript
+
+Zwróć wyłącznie nazwę typu, nie pisz dodatkowego komentarza.

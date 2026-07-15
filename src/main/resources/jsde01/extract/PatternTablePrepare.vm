@@ -1,0 +1,7 @@
+Below is the SQL script:
+```SQL
+$!{sqlScript}
+```SQL
+
+Find the SQL 'create table' command for the table $!{tableName}.
+Return only the found SQL command 'create table'.

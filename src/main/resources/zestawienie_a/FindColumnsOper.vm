@@ -1,0 +1,9 @@
+Here is Java class.
+
+```java
+$!{class_src}
+```java
+
+Find all field names in this class.
+Return endpoint only names, separated by commas.
+Do not return any other comments.

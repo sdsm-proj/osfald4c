@@ -1,0 +1,33 @@
+Poniżej znajduje się definicja klasy repozytorium $!{patternInfraRepoClass}.
+
+```java
+
+$!{java_pattern}
+
+```java
+
+Stwórz analogiczną klasę o nazwie $!{genInfraRepoClass}.
+Niech klasa $!{genInfraRepoClass} zawiera wyłącznie:
+  konstruktor,
+  pola: (LOG, entityManager, usersWebClient),
+  metody: (addNewDomain, findByIds, deleteDomains).
+
+Zmień nazwę metody 'addNewDomain' na 'addNew'.
+Zmień nazwę metody 'deleteDomains' na 'delete'.
+
+Nie wstawiaj lub usuń instukcje importu dla klas: ($!{genEntityClass}, $!{genInfraAddVoClass}).
+W metodach zamień typ $!{patternAppEntityIdClass} na typ $!{genAppEntityIdClass}. Klasę $!{genAppEntityIdClass} zaimportuj z pakietu $!{genAppEntityIdPackage}.
+W metodach zamień typ $!{patternEntityClass} na typ $!{genEntityClass}. Klasy $!{genEntityClass} nie importuj.
+W metodach zamień typ $!{patternInfraAddVoClass} na typ $!{genInfraAddVoClass}. Klasy $!{genInfraAddVoClass} nie importuj.
+
+Niech stworzona klasa $!{genInfraRepoClass} znajdzie się w pakiecie $!{genInfraRepoPackage}.
+
+Dopasuj wywołanie konstruktora $!{genEntityClass} do pól zawartych w klasie:
+
+```java
+
+$!{java_entity}
+
+```java
+
+Zwróć wyłącznie kod źródłowy stworzonej klasy $!{genInfraRepoPackage}.

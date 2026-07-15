@@ -1,0 +1,13 @@
+Poniżej znajduje się definicja klasy $!{patternInfraAddVoClass}.
+
+```java
+
+$!{java_pattern}
+
+```java
+
+Stwórz analogiczną klasę o nazwie $!{genInfraAddVoClass}.
+Niech klasa $!{genInfraAddVoClass} będzie pusta, tzn. niech nie zawiera żadnych pól.
+Niech w miejscu parametrów konstruktora pojawi się komentarz o treści: 'wstaw tu pola'.
+Niech stworzona klasa $!{genInfraAddVoClass} znajdzie się w pakiecie $!{genInfraAddVoPackage}.
+Zwróć wyłącznie kod źródłowy stworzonej klasy $!{genInfraAddVoClass}.

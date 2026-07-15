@@ -1,0 +1,18 @@
+Here is class $!{domainClassSimple}:
+
+```java
+$!{domainClassStr}
+```java
+
+Using class $!{domainClassSimple} create a new class. For class name add suffix `Input`.
+Iterate all fields form $!{domainClassSimple} class.
+If
+  iterated field type is primitive type add it to new class with the same name and change its type to 'String'
+else if
+  iterated field type is defined in ('java.lang', 'java.time') packages add it to new class with the same name and change its type to 'String'.
+otherwise
+  add it to new class and append suffix `Input` to type name.
+
+Make all class fields private.
+Remove comments and empty lines from class definition.
+Do not remove @Data annotation.

@@ -1,0 +1,8 @@
+Below is the definition of the $!{patternAppEntityIdClass} class:
+```java
+$!{java_pattern}
+```java
+
+Create an analogous class named $!{genAppEntityIdClass}.
+Let the created class $!{genAppEntityIdClass} be located in the package $!{genAppEntityIdPackage}.
+Return only the source code of the created class $!{genAppEntityIdClass}.

@@ -1,0 +1,30 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp btnTestJavaParserOp:::p::p, comp btnScenario01::l:p::p}, space ::464:x}, seq t {space ::511:x, comp button1:::p::p, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp btnTestJavaParserOp:::p::p, space s:::p, comp btnScenario01:::p::p, space ::425:x, comp button1:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnTestJavaParserOp"
+				"text": "TestJavaParserOp"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnTestJavaParserOp", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnScenario01"
+				"text": "Scenario01"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnScenario01", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "text"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 595, 545 )
+		} )
+	}
+}

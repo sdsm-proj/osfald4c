@@ -1,0 +1,32 @@
+Poniżej jest definicja tabeli $!{config_patternTableName}:
+
+```SQL
+
+$!{extract_patternTableSqlCreate}
+
+```SQL
+
+A to definicja klasy $!{config_patternAppDtoDtoClass}:
+
+```java
+
+$!{java_patternAppDtoDto}
+
+```java
+
+Stwórz analogiczną klasę o nazwie $!{config_genAppDtoDtoClass} dla tabeli $!{config_genTableName}.
+Struktura tabeli $!{config_genTableName} poniżej:
+
+
+```SQL
+
+$!{extract_genTableSqlCreate}
+
+```SQL
+
+Niech stworzona klasa $!{config_genAppDtoDtoClass} znajdzie się w pakiecie $!{config_genAppDtoDtoPackage}.
+
+Polem identyfikatora (id) stworzonej klasy niech będzie pole typu $!{config_genAppEntityIdClass} znajdujace się w pakiecie $!{config_genAppEntityIdPackage}.
+
+
+Zwróć wyłącznie kod źródłowy stworzonej klasy $!{config_genAppDtoDtoClass}.

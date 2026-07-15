@@ -1,0 +1,10 @@
+package $!{fullPackage};
+
+import org.mapstruct.Mapper;
+import $!{javaOutputFullClass};
+import $!{domainFullClass};
+
+@Mapper(uses = {})
+public abstract class $!{simpleClass} {
+    public abstract $!{javaOutputSimpleClass} domain2Output($!{domainSimpleClass} domain);
+}

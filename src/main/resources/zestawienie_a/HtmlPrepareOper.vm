@@ -1,0 +1,32 @@
+Here is an Angular component that defines list of elements.
+There is a header columns definition ('*opiTableHeader' directive)
+and rows definition ('*opiTableRow' directive).
+
+```html
+
+<div [opiCollection]="_elementList">
+    <opi-table >
+        <tr *opiTableHeader>
+            <th>Id</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>E-mail</th>
+        </tr>
+
+        <tr *opiTableRow="let element">
+            <td>{{element.id}}</td>
+            <td>{{element.imie}}</td>
+            <td>{{element.mazwisko}}</td>
+            <td>{{element.email}}</td>
+        </tr>
+    </opi-table>
+    <br/><br/><br/>
+
+    <button (click)="getList()">GetList</button>
+</div>
+
+```html
+
+Create an analogous component for the following list of fields:
+$!{field_list}
+

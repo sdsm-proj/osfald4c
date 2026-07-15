@@ -1,0 +1,103 @@
+Oto wzór klasy Dto, klasa ‘InfoElementDto’.
+
+```typescript
+
+import { IsoDateDto } from '../models/iso-date-dto';
+export interface InfoElementDto {
+ "etlLoadDate": IsoDateDto;
+ "name": string;
+ "version": string;
+}
+
+
+```typescript
+
+A oto odpowiadający jej wzorcowy schemat (schema) o nazwie ‘InfoElementPropsSchema’ oraz wzorcowy typ ‘InfoElementProps’.
+Schemat ma końcówkę ‘PropsSchema’, typ ma końcówkę ‘Props’.
+
+```typescript
+
+import { z } from 'zod';
+
+
+import { IsoDate } from '@core/date/value-objects/iso-date';
+
+
+export const InfoElementPropsSchema = z.object({
+   name: z.string(),
+   version: z.string(),
+   etlLoadDate: z.instanceof(IsoDate),
+});
+
+
+export type InfoElementProps = z.infer<typeof InfoElementPropsSchema>;
+
+
+```typescript
+
+Poniżej wzorcowa klasa ‘InfoElement’, jej nazwa nie ma dodatkowej końcówki.
+
+```typescript
+
+
+import { always, ValueObject } from '@opi_pib/ts-utility';
+
+import { InfoElementDto } from '@api/rest/models';
+import { IsoDate } from '@core/date/value-objects/iso-date';
+
+import { InfoElementProps } from './info-element-props';
+import { isInfoElementProps } from './is-info-element-props';
+
+export class InfoElement extends ValueObject<InfoElementProps> {
+	constructor(protected override readonly props: InfoElementProps) {
+		super(props);
+	}
+
+	static create(props: InfoElementProps): InfoElement {
+		always(isInfoElementProps(props), 't551zv4i');
+
+		return new InfoElement(props);
+	}
+
+	static fromDto(dto: InfoElementDto) {
+		return this.create({
+			name: dto.name,
+			version: dto.version,
+			etlLoadDate: IsoDate.fromDto(dto.etlLoadDate),
+		});
+	}
+
+	get name() {
+		return this.props.name;
+	}
+
+	get version() {
+		return this.props.version;
+	}
+
+	get etlLoadDate() {
+		return this.props.etlLoadDate;
+	}
+}
+
+
+
+```typescript
+
+
+Stwórz analogiczną dla klasy ‘UserEmail’ klasę o nazwie ‘$!{pureTypeName}’’.
+
+W tworzeniu skorzystaj z poniższych definicji:  ‘$!{dtoTypeName}’, ‘$!{dtoProps}’ oraz ‘$!{dtoPropsSchema}’.
+
+```typescript
+
+    $!{dto_src}
+
+```typescript
+
+```typescript
+
+    $!{dto_props_src}
+
+```typescript
+

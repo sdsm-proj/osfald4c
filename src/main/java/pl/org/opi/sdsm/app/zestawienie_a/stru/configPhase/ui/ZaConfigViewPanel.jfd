@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp edPrjFrontFullPath::::663:x, comp edPrjContractFullPath::l::663:x, comp edPrjBackendFullPath::l::663:x, seq {par l {comp label1:::p::p, comp label2::l:p::p, comp label3::l:p::p, comp label4::l:p::p}, space :0:540:x}, comp edPrjBackendGenFullPath::l::663:x, seq t {space :0:574:x, par l {comp btnSave::t:p::p, comp btnNext::t:p::p}}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp btnSave:::p::p, space :::p, comp label1:::p::p, space :::p, comp edPrjFrontFullPath:::p::p, space :::p, comp label2:::p::p, space :::p, comp edPrjContractFullPath:::p::p, space :::p, comp label3:::p::p, space :::p, comp edPrjBackendFullPath:::p::p, space :::p, comp label4:::p::p, space :::p, comp edPrjBackendGenFullPath:::p::p, space ::211:x, comp btnNext:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSave"
+				"text": "Save"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSave", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "prjFrontFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjFrontFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "prjContractFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjContractFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "prjBackendFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjBackendFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "prjBackendGenFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edPrjBackendGenFullPath"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnNext"
+				"text": "Extract >>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnNext", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 675, 515 )
+		} )
+	}
+}

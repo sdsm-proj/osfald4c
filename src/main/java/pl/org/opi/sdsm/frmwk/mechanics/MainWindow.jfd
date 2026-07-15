@@ -1,0 +1,109 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq t {comp labelPrj:::::x, space :::p, comp labelPhase:::p:168:p}, comp panelMain::t::626:x, seq l {comp labelWait:::p:257:p, space ::142:x, comp labelTime:::p:227:p}}, space :::p}}"
+			"$verticalGroup": "par l {seq t {space :::p, comp panelMain::::492:x, space :::p, par b {comp labelTime::b:p::p, comp labelWait::b:p::p}, space :p:1:p, par b {comp labelPhase::b:p::p, comp labelPrj::b:p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			"title": "Osfald4a"
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelPhase"
+				"text": " "
+				"horizontalAlignment": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelPrj"
+				"text": " "
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:0:x}"
+				"$verticalGroup": "par l {space :0:492:x}"
+			} ) {
+				name: "panelMain"
+				"preferredSize": new java.awt.Dimension( 100, 100 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelWait"
+				"text": "WAIT..."
+				"foreground": sfield java.awt.Color red
+				"font": new java.awt.Font( "Segoe UI", 1, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelTime"
+				"text": "time"
+				"horizontalAlignment": 4
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menuFile"
+					"text": "File"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miNewPrj"
+						"text": "New project"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miNewPrj", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miOpenPrj"
+						"text": "Open project"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miOpenPrj", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+						name: "separator1"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miForceSavePrj"
+						"text": "Save project"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miForceSavePrj", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+						name: "separator2"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miPrjProps"
+						"text": "Project properties"
+					} )
+					add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+						name: "separator3"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miClosePrj"
+						"text": "Close project"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miClosePrj", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menuPhase"
+					"text": "SDSM Phase"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miPh01"
+						"text": "SDSM Config"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miPh01", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miPh02"
+						"text": "SDSM Extract"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miPh02", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miPh03"
+						"text": "SDSM Edit"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miPh03", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miPh04"
+						"text": "SDSM Generate code"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miPh04", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 30, 0 )
+			"size": new java.awt.Dimension( 640, 600 )
+		} )
+	}
+}

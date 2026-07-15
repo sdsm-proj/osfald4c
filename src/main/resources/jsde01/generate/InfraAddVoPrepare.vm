@@ -1,0 +1,14 @@
+Below is the definition of the $!{patternInfraAddVoClass} class:
+```java
+$!{java_pattern}
+```java
+
+Create an analogous class named $!{genInfraAddVoClass}.
+Let class $!{genInfraAddVoClass} have the same fields as the class below, but skip field of type $!{genAppEntityIdClass}:
+```java
+$!{java_AppDtoDtoClass}
+```java
+
+Let the field 'institutionId' be of type 'InstitutionId'.
+The created class $!{genInfraAddVoClass} should be located in the package $!{genInfraAddVoPackage}.
+Return only the source code of the created class $!{genInfraAddVoClass}.

@@ -1,0 +1,72 @@
+package $!{_query_package_name_};
+
+import com.pdv.utensil.db.repo.BaseRepo;
+import com.pdv.utensil.db.repo.StmtGet;
+import com.pdv.utensil.db.trx.iface.Trx;
+import lombok.Data;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+import java.math.BigDecimal;
+import java.time.*;
+
+public class $!{_query_class_name_} extends BaseRepo {
+
+    @Data
+    static public class $!{_query_entity_class_name_} {
+$!{_fields_}    }
+
+    public $!{_query_class_name_}(Trx trx) {
+        super(trx);
+    }
+
+    public List<$!{_query_entity_class_name_}> selectAll(String param01) {
+        List<$!{_query_entity_class_name_}> rsltList = new ArrayList<>();
+        String sql = "";
+
+$!{_find_all_sql_}
+//      sql += " where pole_jakies_tam = ? ";
+
+        executeSelect(sql,
+                (stmt) -> {
+                    //stmt.setString(1, param01);
+                },
+                (rs) -> {
+                    while (rs.next()) {
+                        $!{_query_entity_class_name_} en = new $!{_query_entity_class_name_}();
+                        rs2Entity(rs, en);
+                        rsltList.add(en);
+                    }
+                });
+        return rsltList;
+    }
+
+    public $!{_query_entity_class_name_} selectOne(String param01) {
+        AtomicReference<$!{_query_entity_class_name_}> rslt = new AtomicReference<>();
+        String sql = "";
+
+$!{_find_all_sql_}
+//      sql += " where pole_jakies_tam = ? ";
+
+        executeSelect(sql,
+                (stmt) -> {
+                    //stmt.setString(1, param01);
+                },
+                (rs) -> {
+                    if (rs.next()) {
+                        $!{_query_entity_class_name_} en = new $!{_query_entity_class_name_}();
+                        rs2Entity(rs, en);
+                        rslt.set(en);
+                    }
+                });
+        return rslt.get();
+    }
+
+    protected void rs2Entity(ResultSet rs, $!{_query_entity_class_name_} en) throws SQLException {
+$!{_rs2Entity_}
+    }
+
+}

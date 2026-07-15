@@ -1,0 +1,7 @@
+Zwróć nazwę interfejsu zdefiniowanego w podanym kodzie:
+
+```typescript
+$!{dto_src}
+```typescript
+
+Zwróć wyłącznie nazwę interfejsu, nie pisz dodatkowego komentarza.

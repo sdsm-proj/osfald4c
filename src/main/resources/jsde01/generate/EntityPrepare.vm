@@ -1,0 +1,26 @@
+Below is the definition of the $!{config_patternTableName} table:
+```SQL
+$!{extract_patternTableSqlCreate}
+```SQL
+
+And this is the definition of the $!{config_patternEntityClass} entity class:
+```java
+$!{java_patternEntity}
+```java
+
+Create an analogous class named $!{config_genEntityClass} for the table $!{config_genTableName}.
+The structure of the table $!{config_genTableName} is below:
+```SQL
+$!{extract_genTableSqlCreate}
+```SQL
+
+Let the created class $!{config_genEntityClass} be located in the package $!{config_genEntityPackage}.
+In the created class $!{config_genEntityClass}, replace the field type ‘id’ with the type $!{genAppEntityIdClass}
+located in the package $!{genAppEntityIdPackage}.
+Add to class protected default constructor.
+Let the ‘institutionId’ field be of type ‘InstitutionId’ from the package ‘pl.org.opi.ln.starter.types.InstitutionId’.
+Let the class $!{config_genEntityClass} contain a public constructor that includes all fields except the ‘id’ field.
+
+Return only the source code of the created class $!{config_genEntityClass}.
+
+

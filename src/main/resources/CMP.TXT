@@ -1,0 +1,15 @@
+package pl.org.opi.nawa.raport.formularz.v1.controller.dto.applicantSection;
+
+import lombok.Data;
+
+
+
+
+@Data
+public class ApplicantSectionInput {
+    private String dokumentId;
+    private PersonalDataInput personalData = new PersonalDataInput();
+    private AddressInput address = new AddressInput();
+    private ContactInformationInput contactInformation = new ContactInformationInput();
+    private List<String> listaStringow = new ArrayList<>();
+}

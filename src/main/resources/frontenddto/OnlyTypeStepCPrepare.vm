@@ -1,0 +1,76 @@
+Oto wzór klasy Dto, klasa ‘UserEmailDto’.
+
+```typescript
+
+    export type UserEmailDto = string;
+
+```typescript
+
+A oto odpowiadający jej wzorcowy schemat (schema) o nazwie ‘UserEmailPropsSchema’ oraz wzorcowy typ ‘UserEmailProps’.
+Schemat ma końcówkę ‘PropsSchema’, typ ma końcówkę ‘Props’.
+
+```typescript
+
+    import { z } from 'zod';
+
+    export const UserEmailPropsSchema = z.object({
+    value: z.string(),
+    });
+
+    export type UserEmailProps = z.infer<typeof UserEmailPropsSchema>;
+
+```typescript
+
+Poniżej wzorcowa klasa ‘UserEmail’, jej nazwa nie ma dodatkowej końcówki.
+
+```typescript
+
+    import { always, ValueObject } from '@opi_pib/ts-utility';
+
+    import { UserEmailDto } from '@api/rest/models';
+
+    import { UserEmailProps } from './user-email-props';
+    import { isUserEmailProps } from './is-user-email-props';
+
+    export class UserEmail extends ValueObject<UserEmailProps> {
+    constructor(protected override readonly props: UserEmailProps) {
+    super(props);
+    }
+
+    static create(props: UserEmailProps): UserEmail {
+    always(isUserEmailProps(props), 'wqefcsik');
+
+    return new UserEmail(props);
+    }
+
+    static fromDto(dto: UserEmailDto) {
+    return this.create({ value: dto });
+    }
+
+    get value(): UserEmailDto {
+    return this.props.value;
+    }
+
+    toDto(): UserEmailDto {
+    return this.value;
+    }
+    }
+
+```typescript
+
+
+Stwórz analogiczną dla klasy ‘UserEmail’ klasę o nazwie ‘$!{pureTypeName}’’.
+
+W tworzeniu skorzystaj z poniższych definicji:  ‘$!{dtoTypeName}’, ‘$!{dtoProps}’ oraz ‘$!{dtoPropsSchema}’.
+
+```typescript
+
+    $!{dto_src}
+
+```typescript
+
+```typescript
+
+    $!{dto_props_src}
+
+```typescript
