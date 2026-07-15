@@ -1,6 +1,7 @@
 target/
 /*/target/
 /*/*/target/
+${project.build.directory}/
 .idea/
 /.idea/
 /logs/
