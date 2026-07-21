@@ -23,17 +23,12 @@ public class SimpleRepoGen extends BaseGen {
 
     @Override
     public Phase createPhaseView(EnumPhase phase) {
-        switch(phase) {
-            case CONFIG:
-                return new ConfigPhase();
-            case EXTRACT:
-                return new ExtractPhase();
-            case EDIT:
-                return new EditPhase();
-            case GENERATE:
-                return new GeneratePhase();
-        }
-        return null;
+        return switch (phase) {
+            case CONFIG -> new ConfigPhase();
+            case EXTRACT -> new ExtractPhase();
+            case EDIT -> new EditPhase();
+            case GENERATE -> new GeneratePhase();
+        };
     }
     
 }
