@@ -38,13 +38,19 @@ public class TableEntityGenerator {
     }
 
     private void execCore() throws IOException {
+        //if (skip()) return;
         checkParams();
         prepareDetails();
         createContent();
         SdsmCtx.getInstance().getCurrGen().save();
         save();
     }
-    
+
+    private boolean skip() {
+        tableDetails = _SimpleRepoGenUtil.getModel().getTablesModel().getMapTables().get(tableName);
+        return StringUtils.isBlank(tableDetails.getGenerateParams().getEntityClassName());
+    }
+
     private void checkParams() {
         tableDetails = _SimpleRepoGenUtil.getModel().getTablesModel().getMapTables().get(tableName);
         if (tableDetails == null) {

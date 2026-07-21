@@ -3,9 +3,13 @@ package $!{_test_package_name_};
 import $!{_entity_package_name_}.$!{_entity_class_name_}; 
 import $!{_repo_package_name_}.$!{_repo_class_name_};
 
-import com.pdv.alvorq.sql.db._util.TestPrepareTrxFactory;
-import com.pdv.utensil.db.repo.RepoRuntimeException;
-import com.pdv.utensil.db.trx.iface.Trx;
+import org.junit.jupiter.api.BeforeEach;
+import pl.org.opi.dbaccess.container.DbConnContainer;
+import pl.org.opi.dbaccess.exception.DbException;
+import pl.org.opi.dbaccess.trx.Trx;
+import pl.org.opi.Consta;
+import pl.org.opi.dbaccess.conn.DbConnConfig;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -18,9 +22,17 @@ import java.util.UUID;
 @Slf4j
 public class $!{_test_class_name_} {
 
+    @BeforeEach
+    public void init() {
+        DbConnContainer.addDbConn(new DbConnConfig("Default",
+            Consta.CONN_URL, Consta.CONN_USER, Consta.CONN_PSW, Consta.CONN_DRIVER,
+            false, 20, 180000
+        ));
+    }
+
     @Test
     public void test01() {
-        try (Trx trx = TestPrepareTrxFactory.get().newTrx()) {
+        try (Trx trx = DbConnContainer.newTrx()) {
             String uid = UUID.randomUUID().toString().replace("-", "");
             $!{_repo_class_name_} repo = new $!{_repo_class_name_}(trx);
 
@@ -33,7 +45,7 @@ $!{_set_not_null_fields_for_create_}
             // -- find by key ------------------------------------------------------
             $!{_entity_class_name_} en2 = repo.findByKey(uid);
             if (en2 == null) {
-                throw new RepoRuntimeException("Entity not found, findByKey");
+                throw new DbException("Entity not found, findByKey");
             }
 
             // -- update -----------------------------------------------------------
@@ -43,14 +55,16 @@ $!{_set_all_fields_for_update_}
             // -- find by autoinc --------------------------------------------------
             $!{_entity_class_name_} en3 = repo.findByAutoinc(en2.$!{_autoinc_key_getter_}());
             if (en3 == null) {
-                throw new RepoRuntimeException("Entity not found, findByAutoinc");
+                throw new DbException("Entity not found, findByAutoinc");
             }
 
             // -- find all ---------------------------------------------------------
             repo.findAll();
 
             //----------------------------------------------------------------------
-            trx.commit();
+            trx.rollback();
+        } catch (Exception ex) {
+            throw new DbException(ex);
         }
     }
 

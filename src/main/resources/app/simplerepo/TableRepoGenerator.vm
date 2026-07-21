@@ -2,10 +2,10 @@ package $!{_repo_package_name_};
 
 import $!{_entity_package_name_}.$!{_entity_class_name_};
 
-import com.pdv.utensil.db.repo.BaseRepo;
-import com.pdv.utensil.db.repo.StmtGet;
-import com.pdv.utensil.db.repo.StmtSet;
-import com.pdv.utensil.db.trx.iface.Trx;
+import pl.org.opi.dbaccess.repo.BaseRepo;
+import pl.org.opi.dbaccess.stmt.StmtGet;
+import pl.org.opi.dbaccess.stmt.StmtSet;
+import pl.org.opi.dbaccess.trx.Trx;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

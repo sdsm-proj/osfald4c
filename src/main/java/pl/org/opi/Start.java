@@ -27,16 +27,7 @@ public class Start {
         AppCtx.getInstance().getMainWindow().setVisible(true);
 
         new UcAppendLastOpenedProjects().exec();
-        new UcOpenLastPrj().exec(); // opcja
+        new UcOpenLastPrj().exec();
         log.info("Osfald started");
-
-        // "C:\\prjdron\\sedn\\sedn-frontend\\_sdsm\\fdto01.FRONTEND_DTO.json"
-        // "C:\\ncn\\osf-ncn-nawa-back\\_sdsm\\vssg01.VUE_SPRING_SECTION_GEN.json"
-        // "C:\\ncn\\osf-ncn-nawa-back\\_sdsm\\spa01.SPA_SECTION_GEN.json"
-        // "C:\\prjdron\\jsde\\ln-profiles-api\\_sdsm\\exdo01.JSDE01.json"
-
-        // new UcOpenPrj("C:\\prjdron\\sedn\\sedn-frontend\\_sdsm\\test.FRONTEND_DTO.json").exec();
-        // new UcPhaseSelect().exec(EnumPhase.EXTRACT);
-        // new UcOpenLastPrj().exec();
     }
 }
