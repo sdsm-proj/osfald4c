@@ -1,7 +1,7 @@
 package pl.org.opi.sdsm.frmwk.util.filePathPckg;
 
 import org.apache.commons.lang3.StringUtils;
-import pl.org.opi.commons.fileDir.FileDirNormalizeName;
+import pl.org.opi.util.fileDir.FileDirNormalizeName;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;
 import pl.org.opi.sdsm.frmwk.mechanics.exception.OsfaldRuntimeException;
 

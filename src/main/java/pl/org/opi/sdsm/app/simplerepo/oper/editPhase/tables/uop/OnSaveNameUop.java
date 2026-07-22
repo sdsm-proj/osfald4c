@@ -3,7 +3,7 @@ package pl.org.opi.sdsm.app.simplerepo.oper.editPhase.tables.uop;
 import java.sql.SQLException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import pl.org.opi.commons.fldNames.FldNamesUtils;
+import pl.org.opi.util.fldNames.FldNamesUtils;
 import pl.org.opi.sdsm.app.simplerepo.model.tables.sub.FldDetails;
 import pl.org.opi.sdsm.app.simplerepo.stru.editPhase.ui.EditViewPanel;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;

@@ -1,6 +1,6 @@
 package pl.org.opi.sdsm.frmwk.util.types.java2stmt;
 
-import pl.org.opi.commons.str.Q;
+import pl.org.opi.util.str.Q;
 import pl.org.opi.sdsm.frmwk.mechanics.exception.OsfaldRuntimeException;
 
 public class DefaultValueForJavaType {

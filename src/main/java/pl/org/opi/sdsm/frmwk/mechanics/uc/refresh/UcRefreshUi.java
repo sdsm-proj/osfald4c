@@ -28,7 +28,7 @@ public class UcRefreshUi {
     //--------------------------------------------------------------------------
     
     private void refreshTitle() {
-        String title = "SDSM Osfald";
+        String title = "Osfald";
         Gen gen = SdsmCtx.getInstance().getCurrGen();
         if (gen != null) {
             title += " :: " + gen.getModel().getCode();

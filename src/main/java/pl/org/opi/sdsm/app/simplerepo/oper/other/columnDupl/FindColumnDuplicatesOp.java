@@ -3,7 +3,7 @@ package pl.org.opi.sdsm.app.simplerepo.oper.other.columnDupl;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
-import pl.org.opi.commons.str.Strings2Lines;
+import pl.org.opi.util.str.Strings2Lines;
 import pl.org.opi.sdsm.app.simplerepo.service.extractPhase.dto.ColumnDto;
 
 public class FindColumnDuplicatesOp {

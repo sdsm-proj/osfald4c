@@ -1,4 +1,4 @@
-package pl.org.opi.commons.str;
+package pl.org.opi.util.str;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -7,7 +7,7 @@ package pl.org.opi.sdsm.frmwk.mechanics.ux.dialog.newPrj;
 import java.awt.event.*;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
-import pl.org.opi.commons.fileDir.FileChooserUtils;
+import pl.org.opi.util.fileDir.FileChooserUtils;
 import pl.org.opi.sdsm.frmwk.mechanics.AppCtx;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;
 import pl.org.opi.sdsm.frmwk.mechanics.exception.OsfaldRuntimeException;

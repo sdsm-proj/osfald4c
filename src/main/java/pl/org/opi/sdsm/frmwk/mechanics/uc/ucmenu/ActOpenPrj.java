@@ -1,8 +1,8 @@
 package pl.org.opi.sdsm.frmwk.mechanics.uc.ucmenu;
 
 import lombok.extern.slf4j.Slf4j;
-import pl.org.opi.commons.fileDir.FileChooserFilterJson;
-import pl.org.opi.commons.fileDir.FileChooserUtils;
+import pl.org.opi.util.fileDir.FileChooserFilterJson;
+import pl.org.opi.util.fileDir.FileChooserUtils;
 import pl.org.opi.sdsm.frmwk.util.msgbox.OsfaldMsgBox;
 
 import javax.swing.*;

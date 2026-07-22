@@ -116,9 +116,9 @@ public class MainWindow extends JFrame {
                 menuFile.addSeparator();
 
                 //---- miPrjProps ----
-                miPrjProps.setText("Project properties");
-                menuFile.add(miPrjProps);
-                menuFile.addSeparator();
+//                miPrjProps.setText("Project properties");
+//                menuFile.add(miPrjProps);
+//                menuFile.addSeparator();
 
                 //---- miClosePrj ----
                 miClosePrj.setText("Close project");

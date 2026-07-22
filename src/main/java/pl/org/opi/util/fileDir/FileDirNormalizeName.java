@@ -1,12 +1,12 @@
-package pl.org.opi.commons.fileDir;
+package pl.org.opi.util.fileDir;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 
-import static pl.org.opi.commons.fileDir.FileDirCommon.BACKSLASH;
-import static pl.org.opi.commons.fileDir.FileDirCommon.SLASH;
+import static pl.org.opi.util.fileDir.FileDirCommon.BACKSLASH;
+import static pl.org.opi.util.fileDir.FileDirCommon.SLASH;
 
 public class FileDirNormalizeName {
 

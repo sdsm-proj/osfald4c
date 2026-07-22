@@ -1,4 +1,4 @@
-package pl.org.opi.commons.fileDir;
+package pl.org.opi.util.fileDir;
 
 import java.io.File;
 

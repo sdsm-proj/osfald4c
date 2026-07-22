@@ -1,4 +1,4 @@
-package pl.org.opi.commons.fldNames;
+package pl.org.opi.util.fldNames;
 
 import com.google.common.base.CaseFormat;
 

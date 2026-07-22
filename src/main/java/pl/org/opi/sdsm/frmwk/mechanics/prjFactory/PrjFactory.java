@@ -1,10 +1,10 @@
 package pl.org.opi.sdsm.frmwk.mechanics.prjFactory;
 
 import org.apache.commons.lang3.StringUtils;
-import pl.org.opi.commons.fileDir.FileChooserUtils;
-import pl.org.opi.commons.fileDir.FileDirCommon;
-import pl.org.opi.commons.fileDir.FileDirFindFileOnPathUp;
-import pl.org.opi.commons.fileDir.FileDirNormalizeName;
+import pl.org.opi.util.fileDir.FileChooserUtils;
+import pl.org.opi.util.fileDir.FileDirCommon;
+import pl.org.opi.util.fileDir.FileDirFindFileOnPathUp;
+import pl.org.opi.util.fileDir.FileDirNormalizeName;
 import pl.org.opi.sdsm.frmwk.mechanics.exception.OsfaldRuntimeException;
 import pl.org.opi.sdsm.frmwk.mechanics.gen.Gen;
 import pl.org.opi.sdsm.frmwk.mechanics.gendef.GenDef;

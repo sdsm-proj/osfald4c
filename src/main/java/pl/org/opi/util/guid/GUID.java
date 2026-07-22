@@ -1,4 +1,4 @@
-package pl.org.opi.commons.guid;
+package pl.org.opi.util.guid;
 
 import java.util.UUID;
 

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import pl.org.opi.commons.str.Q;
+import pl.org.opi.util.str.Q;
 import pl.org.opi.sdsm.app.simplerepo._SimpleRepoGenUtil;
 import pl.org.opi.sdsm.app.simplerepo.model.queries.sub.QueryDetails;
 import pl.org.opi.sdsm.app.simplerepo.model.tables.sub.FldDetails;

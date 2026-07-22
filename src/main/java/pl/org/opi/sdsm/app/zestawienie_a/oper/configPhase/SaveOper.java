@@ -1,7 +1,7 @@
 package pl.org.opi.sdsm.app.zestawienie_a.oper.configPhase;
 
 import lombok.RequiredArgsConstructor;
-import pl.org.opi.commons.fileDir.FileDirNormalizeName;
+import pl.org.opi.util.fileDir.FileDirNormalizeName;
 import pl.org.opi.sdsm.app.zestawienie_a._ZestawienieAUtil;
 import pl.org.opi.sdsm.app.zestawienie_a.stru.configPhase.ui.ZaConfigViewPanel;
 import pl.org.opi.sdsm.frmwk.util.msgbox.OsfaldMsgBox;

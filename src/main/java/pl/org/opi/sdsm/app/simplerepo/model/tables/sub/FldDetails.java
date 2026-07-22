@@ -2,7 +2,7 @@ package pl.org.opi.sdsm.app.simplerepo.model.tables.sub;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import pl.org.opi.commons.fldNames.FldNamesUtils;
+import pl.org.opi.util.fldNames.FldNamesUtils;
 
 @Data
 public class FldDetails {
