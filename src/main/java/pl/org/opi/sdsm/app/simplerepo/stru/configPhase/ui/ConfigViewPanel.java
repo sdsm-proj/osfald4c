@@ -1,5 +1,8 @@
 package pl.org.opi.sdsm.app.simplerepo.stru.configPhase.ui;
 
+import javax.swing.*;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle;
 import lombok.Getter;
 import pl.org.opi.sdsm.app.simplerepo.oper.configPhase.VerifyConnUop;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;
@@ -13,81 +16,81 @@ public class ConfigViewPanel extends javax.swing.JPanel {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner non-commercial license
     private void initComponents() {
+        edDatabaseUrl = new JTextField();
+        lbDatabaseUrl = new JLabel();
+        lbDatabaseUser = new JLabel();
+        edDatabaseUser = new JTextField();
+        lbDatabasePass = new JLabel();
+        btnCheckConn = new JButton();
+        btnSave = new JButton();
+        edDatabasePass = new JPasswordField();
 
-        edDatabaseUrl = new javax.swing.JTextField();
-        lbDatabaseUrl = new javax.swing.JLabel();
-        lbDatabaseUser = new javax.swing.JLabel();
-        edDatabaseUser = new javax.swing.JTextField();
-        lbDatabasePass = new javax.swing.JLabel();
-        btnCheckConn = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
-        edDatabasePass = new javax.swing.JPasswordField();
+        //======== this ========
 
+        //---- lbDatabaseUrl ----
         lbDatabaseUrl.setText("Database url");
 
+        //---- lbDatabaseUser ----
         lbDatabaseUser.setText("User");
 
+        //---- lbDatabasePass ----
         lbDatabasePass.setText("Password");
 
+        //---- btnCheckConn ----
         btnCheckConn.setText("Check connection");
-        btnCheckConn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCheckConnActionPerformed(evt);
-            }
-        });
+        btnCheckConn.addActionListener(e -> btnCheckConnActionPerformed(e));
 
+        //---- btnSave ----
         btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
+        btnSave.addActionListener(e -> btnSaveActionPerformed(e));
 
+        //---- edDatabasePass ----
         edDatabasePass.setText("jPasswordField1");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        GroupLayout layout = new GroupLayout(this);
+        setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(edDatabasePass)
-                    .addComponent(edDatabaseUrl, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
-                    .addComponent(edDatabaseUser)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCheckConn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSave))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbDatabaseUrl)
-                            .addComponent(lbDatabaseUser)
-                            .addComponent(lbDatabasePass))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            layout.createParallelGroup()
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup()
+                        .addComponent(edDatabasePass)
+                        .addComponent(edDatabaseUrl, GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
+                        .addComponent(edDatabaseUser)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnCheckConn)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSave))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup()
+                                .addComponent(lbDatabaseUrl)
+                                .addComponent(lbDatabaseUser)
+                                .addComponent(lbDatabasePass))
+                            .addGap(0, 643, Short.MAX_VALUE)))
+                    .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbDatabaseUrl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(edDatabaseUrl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbDatabaseUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(edDatabaseUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbDatabasePass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(edDatabasePass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCheckConn)
-                    .addComponent(btnSave))
-                .addContainerGap(154, Short.MAX_VALUE))
+            layout.createParallelGroup()
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(lbDatabaseUrl)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(edDatabaseUrl, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lbDatabaseUser)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(edDatabaseUser, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lbDatabasePass)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(edDatabasePass, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnCheckConn)
+                        .addComponent(btnSave))
+                    .addContainerGap(86, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -104,13 +107,14 @@ public class ConfigViewPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCheckConn;
-    private javax.swing.JButton btnSave;
-    private javax.swing.JPasswordField edDatabasePass;
-    private javax.swing.JTextField edDatabaseUrl;
-    private javax.swing.JTextField edDatabaseUser;
-    private javax.swing.JLabel lbDatabasePass;
-    private javax.swing.JLabel lbDatabaseUrl;
-    private javax.swing.JLabel lbDatabaseUser;
+    // Generated using JFormDesigner non-commercial license
+    private JTextField edDatabaseUrl;
+    private JLabel lbDatabaseUrl;
+    private JLabel lbDatabaseUser;
+    private JTextField edDatabaseUser;
+    private JLabel lbDatabasePass;
+    private JButton btnCheckConn;
+    private JButton btnSave;
+    private JPasswordField edDatabasePass;
     // End of variables declaration//GEN-END:variables
 }

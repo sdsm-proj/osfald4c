@@ -10,7 +10,6 @@ import pl.org.opi.sdsm.frmwk.mechanics.gendef.GenDef;
 import java.util.LinkedHashMap;
 
 public class RegistryFill {
-
     public static void fill(LinkedHashMap<String, GenDef> definitionMap) {
         definitionMap.put(SimpleRepoGenDef.CODE, new SimpleRepoGenDef());
         definitionMap.put(VueSpringSectionGenDef.CODE, new VueSpringSectionGenDef());
@@ -18,5 +17,4 @@ public class RegistryFill {
         definitionMap.put(FrontendDtoGenDef.CODE, new FrontendDtoGenDef());
         definitionMap.put(Jsde01GenDef.CODE, new Jsde01GenDef());
     }
-
 }

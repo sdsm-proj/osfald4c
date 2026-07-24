@@ -12,10 +12,8 @@ import pl.org.opi.sdsm.frmwk.mechanics.genmodel.BaseGenModel;
 @EqualsAndHashCode(callSuper=false)
 public class SimpleRepoGenModel extends BaseGenModel {
     private final ConfigModel configModel = new ConfigModel();
-
     @JsonIgnore
     private final TablesModel tablesModel = new TablesModel();
-
     @JsonIgnore
     private final QueriesModel queriesModel = new QueriesModel();
 }

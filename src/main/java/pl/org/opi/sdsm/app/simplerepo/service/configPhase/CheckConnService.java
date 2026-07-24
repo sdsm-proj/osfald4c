@@ -13,9 +13,6 @@ public class CheckConnService {
     public void exec() throws SQLException {
         SimpleRepoGenModel model = (SimpleRepoGenModel) SdsmCtx.getInstance().getCurrGen().getModel();
         model.getConfigModel();
-        //DriverManager.getConnection("jdbc:postgresql://localhost/prq02?currentSchema=px","prq02_admin","abcd1234");
-        //DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","oracle");          
-        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/prq02?currentSchema=px","prq02_admin","abcd1234");
         Connection conn = DriverManager.getConnection(
                 model.getConfigModel().getDatabaseUrl(),
                 model.getConfigModel().getDatabaseUser(),

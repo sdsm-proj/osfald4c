@@ -9,8 +9,5 @@ import pl.org.opi.sdsm.app.simplerepo.model.tables.sub.TableDetails;
 
 @Data
 public class TablesModel {
-//    private final List<String> allTables = new ArrayList<>();
-//    private final List<String> availableTables = new ArrayList<>();
-//    private final List<String> chosenTables = new ArrayList<>();
     private final Map<String, TableDetails> mapTables = new HashMap<>();
 }

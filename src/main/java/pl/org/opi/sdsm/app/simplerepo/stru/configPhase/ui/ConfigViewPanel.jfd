@@ -1,0 +1,48 @@
+JFDML JFormDesigner: "8.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp edDatabasePass:::::x, comp edDatabaseUrl::l::708:x, comp edDatabaseUser::l:::x, seq l {comp btnCheckConn:::p::p, space :::x, comp btnSave:::p::p}, seq {par l {comp lbDatabaseUrl::l:p::p, comp lbDatabaseUser::l:p::p, comp lbDatabasePass::l:p::p}, space :0:643:x}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lbDatabaseUrl:::p::p, space :::p, comp edDatabaseUrl:::p::p, space u:::p, comp lbDatabaseUser:::p::p, space :::p, comp edDatabaseUser:::p::p, space u:::p, comp lbDatabasePass:::p::p, space :::p, comp edDatabasePass:::p::p, space s:::p, par b {comp btnCheckConn::b:p::p, comp btnSave::b:p::p}, space ::86:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edDatabaseUrl"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbDatabaseUrl"
+				"text": "Database url"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbDatabaseUser"
+				"text": "User"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edDatabaseUser"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbDatabasePass"
+				"text": "Password"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCheckConn"
+				"text": "Check connection"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCheckConnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSave"
+				"text": "Save"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSaveActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "edDatabasePass"
+				"text": "jPasswordField1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 720, 320 )
+		} )
+	}
+}

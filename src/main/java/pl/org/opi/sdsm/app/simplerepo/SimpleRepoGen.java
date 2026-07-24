@@ -10,17 +10,14 @@ import pl.org.opi.sdsm.frmwk.mechanics.phaseview.EnumPhase;
 import pl.org.opi.sdsm.frmwk.mechanics.phaseview.Phase;
 
 public class SimpleRepoGen extends BaseGen {
-
     @Override
     public SimpleRepoGenModel getModel() {
         return (SimpleRepoGenModel) super.getModel();
     }
-
     @Override
     public boolean readyToShowPhase(EnumPhase phase) {
         return true;
     }
-
     @Override
     public Phase createPhaseView(EnumPhase phase) {
         return switch (phase) {
@@ -30,5 +27,4 @@ public class SimpleRepoGen extends BaseGen {
             case GENERATE -> new GeneratePhase();
         };
     }
-    
 }

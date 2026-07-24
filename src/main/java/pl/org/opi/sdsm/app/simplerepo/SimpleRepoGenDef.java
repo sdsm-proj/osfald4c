@@ -4,7 +4,6 @@ import pl.org.opi.sdsm.app.simplerepo.model.SimpleRepoGenModel;
 import pl.org.opi.sdsm.frmwk.mechanics.gendef.BaseGenDef;
 
 public class SimpleRepoGenDef extends BaseGenDef {
-
     public static final String CODE = "SIMPLE_REPO";
 
     public SimpleRepoGenDef() {
@@ -12,5 +11,4 @@ public class SimpleRepoGenDef extends BaseGenDef {
                 SimpleRepoGen.class, SimpleRepoGenModel.class,
                 "pom.xml");
     }
-
 }

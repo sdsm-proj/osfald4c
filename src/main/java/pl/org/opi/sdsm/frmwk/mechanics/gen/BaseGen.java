@@ -1,10 +1,8 @@
 package pl.org.opi.sdsm.frmwk.mechanics.gen;
 
-import pl.org.opi.sdsm.frmwk.mechanics.gendef.GenDef;
 import pl.org.opi.sdsm.frmwk.mechanics.genmodel.BaseGenModel;
 import pl.org.opi.sdsm.frmwk.mechanics.phaseview.EnumPhase;
 import pl.org.opi.sdsm.frmwk.mechanics.phaseview.Phase;
-import pl.org.opi.sdsm.frmwk.mechanics.registry.PrjTypeRegistry;
 import pl.org.opi.sdsm.frmwk.mechanics.uc.mainwindow.UcClearView;
 import pl.org.opi.sdsm.frmwk.mechanics.uc.mainwindow.UcSetView;
 import pl.org.opi.sdsm.frmwk.util.serde.Serde;
@@ -18,11 +16,6 @@ public abstract class BaseGen implements Gen {
     private Phase currPhaseView;
 
     @Override
-    public GenDef getDef() {
-        return PrjTypeRegistry.getInstance().getDefinitionByCode(this.getModel().getCode());
-    }
-
-    @Override
     public void save() {
         Serde.ser(model.getPrjFullFileName(), model);
     }
@@ -30,11 +23,6 @@ public abstract class BaseGen implements Gen {
     @Override
     public BaseGenModel getModel() {
         return model;
-    }
-
-    @Override
-    public Phase getCurrPhaseView() {
-        return currPhaseView;
     }
 
     @Override

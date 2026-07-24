@@ -8,33 +8,22 @@ import pl.org.opi.sdsm.frmwk.mechanics.phaseview.Phase;
 
 @Slf4j
 public class ConfigPhase implements Phase {
-
     private ConfigViewPanel viewPanel;
-
     @Override
     public boolean canShow() {
         return true;
     }
-
-
     @Override
     public boolean canClose() {
         return true;
     }
-
     @Override
     public void afterCreate() {
-        log.info("ConfigPhase.afterCreate");
-        //MsgBox.info("ConfigPhase.afterCreate");
     }
-
     @Override
     public void afterShow() {
-        log.info("ConfigPhase.afterShow");
-        //MsgBox.info("ConfigPhase.afterShow");
         new ConfigViewPanelTransfer((ConfigViewPanel) getViewPanel()).model2Ui();
     }
-
     @Override
     public JPanel getViewPanel() {
         if (viewPanel == null) {
@@ -42,5 +31,4 @@ public class ConfigPhase implements Phase {
         }
         return viewPanel;
     }
-    
 }
