@@ -1,5 +1,6 @@
 package pl.org.opi.sdsm.app;
 
+import pl.org.opi.sdsm.app.formalsample.FormalSampleGenDef;
 import pl.org.opi.sdsm.app.frontenddto.FrontendDtoGenDef;
 import pl.org.opi.sdsm.app.jsde01.Jsde01GenDef;
 import pl.org.opi.sdsm.app.simplerepo.SimpleRepoGenDef;
@@ -11,6 +12,7 @@ import java.util.LinkedHashMap;
 
 public class RegistryFill {
     public static void fill(LinkedHashMap<String, GenDef> definitionMap) {
+        definitionMap.put(FormalSampleGenDef.CODE, new FormalSampleGenDef());
         definitionMap.put(SimpleRepoGenDef.CODE, new SimpleRepoGenDef());
         definitionMap.put(VueSpringSectionGenDef.CODE, new VueSpringSectionGenDef());
         definitionMap.put(SpaSectionGenDef.CODE, new SpaSectionGenDef());
