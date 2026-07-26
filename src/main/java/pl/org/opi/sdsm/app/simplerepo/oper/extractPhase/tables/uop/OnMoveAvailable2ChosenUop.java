@@ -27,16 +27,7 @@ public class OnMoveAvailable2ChosenUop {
     }
 
     private void execCore(ExtractViewPanel panel, String tableName) throws Exception {
-        // Process stopped if exception (e.g. no one field primary key)
         extractAndSave(tableName);
-
-        // Move table to chosen
-//        List<String> selectedTables = _SimpleRepoGenUtil.getModel().getTablesModel().getChosenTables();
-//        if (!selectedTables.contains(tableName)) {
-//            selectedTables.add(tableName);
-//        }
-
-        // Refresh panel
         new InitTablesOp(panel).exec();
     }
 

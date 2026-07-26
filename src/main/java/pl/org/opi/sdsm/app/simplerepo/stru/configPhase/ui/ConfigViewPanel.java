@@ -4,7 +4,7 @@ import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 import lombok.Getter;
-import pl.org.opi.sdsm.app.simplerepo.oper.configPhase.VerifyConnUop;
+import pl.org.opi.sdsm.app.simplerepo.oper.configPhase.VerifyConnOp;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;
 
 @Getter
@@ -102,7 +102,7 @@ public class ConfigViewPanel extends javax.swing.JPanel {
     private void btnCheckConnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckConnActionPerformed
         new ConfigViewPanelTransfer(this).ui2Model();
         SdsmCtx.getInstance().getCurrGen().save();
-        new VerifyConnUop().exec();
+        new VerifyConnOp().exec();
     }//GEN-LAST:event_btnCheckConnActionPerformed
 
 

@@ -6,7 +6,7 @@ import pl.org.opi.sdsm.app.simplerepo.service.other.GetConn;
 import pl.org.opi.sdsm.frmwk.util.msgbox.OsfaldMsgBox;
 
 @Slf4j
-public class VerifyConnUop {
+public class VerifyConnOp {
 
     public void exec() {
         try (Connection conn = new GetConn().exec()) {
