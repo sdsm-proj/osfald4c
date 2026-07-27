@@ -3,6 +3,7 @@ package pl.org.opi.sdsm.app.formalsample.stru.configPhase;
 import javax.swing.JPanel;
 import lombok.extern.slf4j.Slf4j;
 import pl.org.opi.sdsm.app.formalsample.stru.configPhase.ui.ConfigViewPanel;
+import pl.org.opi.sdsm.app.formalsample.stru.configPhase.ui.ConfigViewPanelTransfer;
 import pl.org.opi.sdsm.frmwk.mechanics.phaseview.Phase;
 
 @Slf4j
@@ -22,6 +23,7 @@ public class ConfigPhase implements Phase {
     }
     @Override
     public void afterShow() {
+        new ConfigViewPanelTransfer(viewPanel).model2Ui();
     }
     @Override
     public JPanel getViewPanel() {

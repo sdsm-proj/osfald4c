@@ -4,13 +4,26 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::375:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::278:x}}"
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp label1:::p::p, space :0:185:x}, seq {comp edNazwaPlikuSql::::304:x, space :::p, comp btnWskazPlikSql:::p::p}, seq t {space :0:272:x, comp btnNextPhase:::p::p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space :::p, par b {comp btnWskazPlikSql::b:p::p, comp edNazwaPlikuSql::b:p::p}, space ::206:x, comp btnNextPhase:::p::p, space :::p}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "ConfigViewPanel"
+				"text": "Pełna nazwa pliku z definicją tabel SQL"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "edNazwaPlikuSql"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnWskazPlikSql"
+				"text": "..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnWskazPlikSql", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnNextPhase"
+				"text": "Kolejna faza >>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnNextPhase", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

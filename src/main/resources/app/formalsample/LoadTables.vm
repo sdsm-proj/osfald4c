@@ -1,0 +1,7 @@
+Wyszukaj w podanym poniżej kodzie w języku SQL nazw zdefiniowanych tabel.
+```sql
+$!{_sql_}
+```sql
+
+Zwróć nazwy tabel w postaci kolejnych wierszy, każda nazwa tabeli w osobnym wierszu.
+Nie zwracaj żadnego dodatkowego komentarza.

@@ -1,0 +1,18 @@
+Wyszukaj w podanym poniżej kodzie w języku SQL:
+```sql
+$!{_sql_}
+```sql
+definicję tabeli o nazwie: $!{_tableName_}.
+
+Dla tej tabeli stwórz listę wierszy, każdy z nich będzie definiował jedno pole.
+Nazwa pola to konwersja nazwy z tabeli SQL do nazwy zgodnej z konwencją języka Java (camelCase).
+Obok nazwy, w tym samym wierszu podaj typ Java, który najlepiej odpowiada typowi pole SQL.
+Obok, w nawiasie, podaj opcjonalne, pasujące typy Java.
+
+Zwróć wyłącznie wiersze definiujące kolejne pola, nie zwracaj żadnego dodatkowego komentarza.
+Nie dodwaj symboli początku i końca bloku (```).
+
+Przykład:
+
+poleJeden int (Integer, Decimal)
+poleDwa   Date (LocalDate)

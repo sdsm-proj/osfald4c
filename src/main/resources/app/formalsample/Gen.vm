@@ -1,0 +1,11 @@
+Stwórz klasę w języku Java, która będzie miała pola odpowiadające poniższej liście:
+```
+$!{_fields_}
+```
+Sprawdź, czy nazwy pól są w formacie camelCase, jeśli nie - dokonaj korekty.
+Typ każdego jest pierwszym typem znajdujacym się za nazwą pola, niezależnie od tego, czy jest w nawiasie, czy nie.
+Nazwa klasy to dostosowana do formatu camelCase nazwa tabeli:  $!{_tableName_}.
+Do nazwy klasy dodaj sufiks 'Dto'.
+Zwróć wyłącznie definicję klasy.
+Nie zwracaj żadnego dodatkowego komentarza.
+Nie dodwaj symboli początku i końca bloku (```).

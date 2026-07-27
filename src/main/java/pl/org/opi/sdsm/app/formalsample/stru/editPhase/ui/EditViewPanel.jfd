@@ -4,17 +4,35 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::375:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::278:x}}"
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp label2:::p::p, space :0:0:x}, seq t {comp btnLoadRefresh:::p::p, space :::p, par l {seq {space :0:250:x, comp btnNextPhase:::p::p}, seq l {comp btnConfirm:::p::p, space :0:230:x}}}, comp taFieldsEdited::l::563:x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label2:::p::p, space :::p, comp taFieldsEdited::::280:x, space u:::p, par b {comp btnLoadRefresh::b:p::p, comp btnConfirm::b:p::p}, space :p:4:p, comp btnNextPhase:::p::p, space :::p}}"
 		} ) {
 			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnNextPhase"
+				"text": "Kolejna faza >>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnNextPhase", true ) )
+			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": "EditViewPanel"
+				name: "label2"
+				"text": "Ostateczna lista nazw i typów"
+			} )
+			add( new FormComponent( "javax.swing.JTextArea" ) {
+				name: "taFieldsEdited"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnLoadRefresh"
+				"text": "Załaduj/odśwież listę pobraną"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnLoadRefresh", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnConfirm"
+				"text": "Zaakceptuj listę pól"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "onBtnConfirm", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 575, 390 )
 		} )
 	}
 }
