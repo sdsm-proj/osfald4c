@@ -5,7 +5,7 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 			"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp label2:::p::p, space :0:0:x}, seq t {comp btnLoadRefresh:::p::p, space :::p, par l {seq {space :0:250:x, comp btnNextPhase:::p::p}, seq l {comp btnConfirm:::p::p, space :0:230:x}}}, comp taFieldsEdited::l::563:x}, space :::p}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp label2:::p::p, space :::p, comp taFieldsEdited::::280:x, space u:::p, par b {comp btnLoadRefresh::b:p::p, comp btnConfirm::b:p::p}, space :p:4:p, comp btnNextPhase:::p::p, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label2:::p::p, space :::p, comp taFieldsEdited::::150:x, space u:::p, par b {comp btnLoadRefresh::b:p::p, comp btnConfirm::b:p::p}, space :p:4:p, comp btnNextPhase:::p::p, space :::p}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -32,7 +32,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 575, 390 )
+			"size": new java.awt.Dimension( 575, 260 )
 		} )
 	}
 }

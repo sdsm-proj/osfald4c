@@ -5,8 +5,8 @@
 package pl.org.opi.sdsm.app.formalsample.stru.editPhase.ui;
 
 import lombok.Getter;
-import pl.org.opi.sdsm.app.formalsample.oper.editPhase.Confirm;
-import pl.org.opi.sdsm.app.formalsample.oper.editPhase.LoadRefresh;
+import pl.org.opi.sdsm.app.formalsample.oper.editPhase.ConfirmOp;
+import pl.org.opi.sdsm.app.formalsample.oper.editPhase.LoadRefreshOp;
 import pl.org.opi.sdsm.frmwk.mechanics.SdsmCtx;
 import pl.org.opi.sdsm.frmwk.mechanics.phaseview.EnumPhase;
 
@@ -21,11 +21,11 @@ public class EditViewPanel extends JPanel {
     }
 
     private void onBtnLoadRefresh(ActionEvent e) {
-        new LoadRefresh().exec(this);
+        new LoadRefreshOp().exec(this);
     }
 
     private void onBtnConfirm(ActionEvent e) {
-        new Confirm().exec(this);
+        new ConfirmOp().exec(this);
     }
 
     private void onBtnNextPhase(ActionEvent e) {
@@ -87,7 +87,7 @@ public class EditViewPanel extends JPanel {
                     .addContainerGap()
                     .addComponent(label2)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(taFieldsEdited, GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                    .addComponent(taFieldsEdited, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(btnLoadRefresh)
